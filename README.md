@@ -19,8 +19,7 @@
 ## Configuring some basic files
 
  - create webpack.config.js file
- 
-{	
+   ```bash
 	const path = require('path');
 	const HtmlWebpackPlugin = require('html-webpack-plugin');
 	const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -43,7 +42,7 @@
   		},
     		plugins: [HtmlWebpackPluginConfig]
 	}
-}
+  ```
 
 - create .babelrc file
 
@@ -57,8 +56,9 @@
 - inside src create - index.js and index.html
 	- inside index.js ..... write something, like console.log("hey");
 	- create a basic intex.html file and add following inside body tag:
+		```bash 
 		<div id="root"></div>
-
+		```
 ## Starting Webpack for local dev
 
 - add "start": "webpack-dev-server" .. under "scripts" of package.json
@@ -71,7 +71,7 @@
 
 - create "component" directory under client
 - create "App.jsx" file inside component ..... (using PascalCase is standart for naming)
-
+```bash
 	import React from 'react';
 
 	export default class App extends React.Component {
@@ -82,13 +82,13 @@
       				</div>);
   		}
 	}
-
+```
 - update index.js with following
- 	
+ ```bash
 	import React from 'react';
 	import ReactDOM from 'react-dom';
 	import App from './componets/App.jsx';
 
 	ReactDOM.render(<App />, document.getElementById('root'));
-
+```
 - Go to http://localhost:8080 and validate the "Hello World" h1 tag
