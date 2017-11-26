@@ -19,7 +19,8 @@
 ## Configuring some basic files
 
  - create webpack.config.js file
-	
+ 
+{	
 	const path = require('path');
 	const HtmlWebpackPlugin = require('html-webpack-plugin');
 	const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -42,6 +43,7 @@
   		},
     		plugins: [HtmlWebpackPluginConfig]
 	}
+}
 
 - create .babelrc file
 
