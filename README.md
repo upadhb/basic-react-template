@@ -1,12 +1,12 @@
 # basic-react-template
 
 
-##Pre-Installation
+## Pre-Installation
 
  - Node
  - Yarn ... if using yarn as global package manager
 
-........ Basic Installation ............:
+## Basic Installation
 
  - npm init
  - npm i -D webpack webpack-dev-server
@@ -16,19 +16,20 @@
  - npm i -D html-webpack-plugin (To load the bundeled file created by Babel Loaders
 				 dynamically in the index.html file)
 
-........Configuring some basic files .............
+## Configuring some basic files
 
  - create webpack.config.js file
+	
 	const path = require('path');
 	const HtmlWebpackPlugin = require('html-webpack-plugin');
 	const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-	template: './client/index.html',
+	template: './src/index.html',
     	filename: 'index.html',
     	inject: 'body'
 	});
 
 	module.exports = {
-  		entry: './client/index.js',
+  		entry: './src/index.js',
   		output: {
     			path: path.resolve('dist'),
     			filename: 'index_bundle.js'
@@ -50,13 +51,13 @@
     			]
 		}
 
-- create 'client' folder
-- inside client create - index.js and index.html
+- create 'src' folder
+- inside src create - index.js and index.html
 	- inside index.js ..... write something, like console.log("hey");
 	- create a basic intex.html file and add following inside body tag:
 		<div id="root"></div>
 
-.......... Starting Webpack for local dev .........
+## Starting Webpack for local dev
 
 - add "start": "webpack-dev-server" .. under "scripts" of package.json
 - run npm start
@@ -64,7 +65,7 @@
 - console should log "hey"
 
 
-............. Createing first Component ..........
+## Createing first Component
 
 - create "component" directory under client
 - create "App.jsx" file inside component ..... (using PascalCase is standart for naming)
@@ -81,7 +82,8 @@
 	}
 
 - update index.js with following
- 	import React from 'react';
+ 	
+	import React from 'react';
 	import ReactDOM from 'react-dom';
 	import App from './componets/App.jsx';
 
