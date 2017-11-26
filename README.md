@@ -41,8 +41,7 @@
     			]
   		},
     		plugins: [HtmlWebpackPluginConfig]
-	}
-  ```
+	}```
 
 - create .babelrc file
 
